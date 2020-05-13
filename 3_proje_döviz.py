@@ -319,13 +319,13 @@ while True:
 
 
         display_html(html_table2,raw=True)
-        df =pd.read_html(html_table2)
-        df = df[0]
-        df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
-        df = df.set_index('Altın Cinsi')
+        dt =pd.read_html(html_table2)
+        dt = dt[0]
+        dt = dt.loc[:, ~dt.columns.str.contains('^Unnamed')]
+        dt = dt.set_index('Altın Cinsi')
 
 
-        print(df)
+        print(dt)
     elif(a=="3"):
         html_table3="""<table>
                         <thead>
